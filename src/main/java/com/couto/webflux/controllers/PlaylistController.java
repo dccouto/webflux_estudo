@@ -14,7 +14,10 @@ import com.couto.webflux.services.PlaylistService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RestController
+/**
+ * EStilo padrão de controller
+ * */
+//@RestController
 @RequestMapping("/playlist")
 public class PlaylistController {
 	
@@ -27,7 +30,7 @@ public class PlaylistController {
 	}
 	
 	@GetMapping("/{id}")
-	public Mono<Playlist> getAllPlaylist(@PathVariable String id){
+	public Mono<Playlist> getPlaylistById(@PathVariable String id){
 		return playlistService.findById(id);
 	}
 	
